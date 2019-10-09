@@ -86,12 +86,16 @@ fs.createReadStream(INPUT)
   	})
 
     var rows = _.flatMap(posts);
+    if(rows.length > 0) {
       /* Save posts */
-    (function(fname) {
-      fastcsv.writeToPath(fname, rows, {headers: _.concat('relation_type', headers), delimiter: OUTPUT_CSV_DELIMITER })
-        .on('error', err => console.error(err))
-        .on('finish', () => console.log(fname + ' written.'));
-    })('user_posts.csv')
+      (function(fname) {
+        fastcsv.writeToPath(fname, rows, {headers: _.concat('relation_type', headers), delimiter: OUTPUT_CSV_DELIMITER })
+          .on('error', err => console.error(err))
+          .on('finish', () => console.log(fname + ' written.'));
+      })('user_posts.csv')
+    } else {
+      console.log('No matching items found.')
+    }
   
   })
 
