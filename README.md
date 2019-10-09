@@ -43,6 +43,7 @@ Upload input and user list and try it
     node filter.js <YOUR-DATA-FILE.csv> <USER-LIST.csv>
 
 Data file example is *example.csv*
+
 User file example is *example_users.csv*
 
 If everything is correct, following files should be created
