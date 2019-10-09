@@ -9,7 +9,7 @@ function is_ad_caption(s) {
 function xd(v){console.log(v); process.exit();}
 
 if(process.argv.length < 3) {
-	xd('Usage: node analyze.js <input>\n - input: input csv file')
+	xd('Processes input file and creates user/mention and user/partner pairs.\nExample input: example.csv\n\nUsage: node analyze.js <input>\n - input: input csv file')
 }
 
 //const INPUT = 'csv_small.csv';

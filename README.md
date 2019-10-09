@@ -21,12 +21,34 @@
 
     node analyze.js example.csv
     
+## Using analyzer
+
+Upload you own file and try it
+
+    node analyze.js <YOUR-DATA-FILE.csv>
+
+Data file example is *example.csv*
+
 If everything is correct, following files should be created
 - user_mentions.csv
 - mention_users.csv
 - user_partners.csv
 - partner_users.csv
 
-6. Upload you own file and try it
 
-    node analyze.js <YOUR-FILE.csv>
+## Using filter
+
+Upload input and user list and try it
+
+    node filter.js <YOUR-DATA-FILE.csv> <USER-LIST.csv>
+
+Data file example is *example.csv*
+User file example is *example_users.csv*
+
+If everything is correct, following files should be created
+- user_relations.csv
+- user_posts.csv
+
+
+
+
